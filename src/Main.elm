@@ -170,7 +170,7 @@ view model =
             , h4 [] [ text "to make actual space , type space 2 times" ]
             , p [] [ text "space  = space + space" ]
             , h4 [] [ text "complex example" ]
-            , p [] [ text "ខ្ញុំ  = k + j + space + [j + j] + u + [m + m]" ]
+            , p [] [ text "ខ្ញុំ  = k + k + j + space + [j + j] + u + [m + m]" ]
             , h4 [] [ text "Change to khmer unicode before typing" ]
             ]
         , hr [] []
