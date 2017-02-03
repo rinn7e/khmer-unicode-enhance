@@ -1,0 +1,16 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Elm SPA example</title>
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" >
+	<style>body{font-size:32px}</style>
+  </head>
+
+  <body>
+    <div></div>
+    <script src="dist/elm.js"></script>
+    <script>Elm.Main.embed(document.querySelector("div"));</script>
+  </body>
+</html>
