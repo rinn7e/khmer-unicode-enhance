@@ -9633,16 +9633,17 @@ var _user$project$Main$update = F2(
 								if (_elm_lang$core$Native_Utils.eq(
 									_elm_lang$core$List$length(x),
 									2)) {
-									var $char = A2(
-										_elm_lang$core$Dict$get,
-										A2(
-											_elm_lang$core$Maybe$withDefault,
-											'error',
-											_elm_lang$core$List$head(x)),
-										model.akharakrom);
+									var original = A2(
+										_elm_lang$core$Maybe$withDefault,
+										'error',
+										_elm_lang$core$List$head(x));
+									var $char = A2(_elm_lang$core$Dict$get, original, model.akharakrom);
 									return {
 										ctor: '::',
-										_0: A2(_elm_lang$core$Maybe$withDefault, 'error', $char),
+										_0: A2(
+											_elm_lang$core$Maybe$withDefault,
+											A2(_elm_lang$core$Basics_ops['++'], original, original),
+											$char),
 										_1: {ctor: '[]'}
 									};
 								} else {
@@ -9800,12 +9801,8 @@ var _user$project$Main$model = {
 																																															_0: {ctor: '_Tuple2', _0: '​', _1: ' '},
 																																															_1: {
 																																																ctor: '::',
-																																																_0: {ctor: '_Tuple2', _0: '\n', _1: '\n'},
-																																																_1: {
-																																																	ctor: '::',
-																																																	_0: {ctor: '_Tuple2', _0: 'error', _1: 'Mouse'},
-																																																	_1: {ctor: '[]'}
-																																																}
+																																																_0: {ctor: '_Tuple2', _0: 'error', _1: 'Mouse'},
+																																																_1: {ctor: '[]'}
 																																															}
 																																														}
 																																													}

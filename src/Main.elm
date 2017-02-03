@@ -76,7 +76,6 @@ model =
             , ( "។", "៕" )
             , ( "៊", "?" )
             , ( "\x200B", " " )
-            , ( "\n", "\n" )
             , ( "error", "Mouse" )
             ]
     }
@@ -132,10 +131,13 @@ update msg model =
                                         -- else
                                         --     x
                                         let
+                                            original =
+                                                Maybe.withDefault "error" (List.head x)
+
                                             char =
-                                                Dict.get (Maybe.withDefault "error" (List.head x)) model.akharakrom
+                                                Dict.get original model.akharakrom
                                         in
-                                            [ Maybe.withDefault "error" char ]
+                                            [ Maybe.withDefault (original ++ original) char ]
                                         -- else if (List.length x == 3) then
                                         --     [ "្ញ" ]
                                     else
