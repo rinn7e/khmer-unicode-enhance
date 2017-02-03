@@ -9982,7 +9982,7 @@ var _user$project$Main$view = function (model) {
 																	{ctor: '[]'},
 																	{
 																		ctor: '::',
-																		_0: _elm_lang$html$Html$text('ខ្ញុំ  = k + j + space + [j + j] + u + [m + m]'),
+																		_0: _elm_lang$html$Html$text('ខ្ញុំ  = x + j + space + [j + j] + u + [m + m]'),
 																		_1: {ctor: '[]'}
 																	}),
 																_1: {
