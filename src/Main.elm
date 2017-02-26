@@ -21,6 +21,7 @@ type alias Model =
     , translate : String
     , listTest : List (List String)
     , akharakrom : Dict.Dict String String
+    , akharakrom2 : Dict.Dict String String
     }
 
 
@@ -31,7 +32,8 @@ model =
     , listTest = [ [] ]
     , akharakrom =
         Dict.fromList
-            [ ( "១", "!" )
+            [ ( "«", "»" )
+            , ( "១", "!" )
             , ( "២", "ៗ" )
             , ( "៣", "ឈ" )
             , ( "៤", "\"" )
@@ -43,6 +45,7 @@ model =
             , ( "០", ")" )
             , ( "ឥ", "៌" )
             , ( "ឲ", "=" )
+            , ( "ឮ", "ឭ" )
             , ( "ឆ", "ឈ" )
             , ( "ឹ", "ឺ" )
             , ( "េ", "ែ" )
@@ -77,6 +80,32 @@ model =
             , ( "៊", "?" )
             , ( "\x200B", " " )
             , ( "error", "Mouse" )
+            ]
+    , akharakrom2 =
+        Dict.fromList
+            [ ( "២", "@" )
+            , ( "៣", "៑" )
+            , ( "៤", "$" )
+            , ( "៥", "€" )
+            , ( "៦", "៙" )
+            , ( "៧", "៚" )
+            , ( "៨", "*" )
+            , ( "៩", "{" )
+            , ( "០", "}" )
+            , ( "ឥ", "x" )
+            , ( "ឲ", "៎" )
+            , ( "ឮ", "\\" )
+            , ( "េ", "ឯ" )
+            , ( "រ", "ឫ" )
+            , ( "ិ", "ឦ" )
+            , ( "ោ", "ឱ" )
+            , ( "ផ", "ឰ" )
+            , ( "ៀ", "ឩ" )
+            , ( "ឪ", "ឳ" )
+            , ( "ើ", "៖" )
+            , ( "់", "ៈ" )
+            , ( "។", "." )
+            , ( "៊", "/" )
             ]
     }
 
@@ -140,6 +169,18 @@ update msg model =
                                             [ Maybe.withDefault (original ++ original) char ]
                                         -- else if (List.length x == 3) then
                                         --     [ "្ញ" ]
+                                    else if (List.length x == 3) then
+                                        let
+                                            original =
+                                                Maybe.withDefault "error" (List.head x)
+
+                                            char =
+                                                Dict.get original model.akharakrom
+
+                                            char2 =
+                                                Dict.get original model.akharakrom2
+                                        in
+                                            [ Maybe.withDefault ((Maybe.withDefault (original ++ original) char) ++ original) char2 ]
                                     else
                                         x
                                 )
@@ -176,8 +217,10 @@ view model =
             , h4 [] [ text "Change to khmer unicode before typing" ]
             ]
         , hr [] []
-        , pre [] [ text model.translate ]
+        , h4 [] [ text "Look here" ]
+        , p [ class "output" ] [ text model.translate ]
         , hr [] []
+        , h4 [] [ text "Type Here" ]
         , textarea
             [ value model.input
             , onInput UserInput
