@@ -6,14 +6,15 @@
     <title>Improved Khmer Unicode</title>
     <link rel="stylesheet" href="assets/css/bootstrap.css" >
     <link rel="stylesheet" href="assets/css/main.css" >
-    <style >
-      .output {font-size:22px;word-wrap:break-word; color:black; white-space:pre-line;}
-    </style>
+
   </head>
 
   <body>
     <div></div>
+    <script src="assets/js/clipboard.min.js"></script>
     <script src="dist/elm.js"></script>
+
     <script>Elm.Main.embed(document.querySelector("div"));</script>
+    <script> var clipboard = new Clipboard('.copy-button')</script>
   </body>
 </html>

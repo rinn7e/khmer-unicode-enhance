@@ -19,6 +19,7 @@ main =
 type alias Model =
     { input : String
     , translate : String
+    , tutorial : Bool
     , listTest : List (List String)
     , akharakrom : Dict.Dict String String
     , akharakrom2 : Dict.Dict String String
@@ -28,7 +29,8 @@ type alias Model =
 model : Model
 model =
     { input = ""
-    , translate = ""
+    , translate = "អ្វីដែលសរសារនឹងចេញនៅទីនេះ"
+    , tutorial = True
     , listTest = [ [] ]
     , akharakrom =
         Dict.fromList
@@ -112,6 +114,7 @@ model =
 
 type Msg
     = UserInput String
+    | ToggleTutorial
 
 
 
@@ -127,6 +130,12 @@ update msg model =
             Dict.fromList [ ( "Tom", "Cat" ), ( "Jerry", "Mouse" ) ]
     in
         case msg of
+            ToggleTutorial ->
+                if model.tutorial then
+                    ({ model | tutorial = False })
+                else
+                    ({ model | tutorial = True })
+
             UserInput text ->
                 let
                     -- array of array of character group by dup so that we can change to its other form
@@ -198,37 +207,64 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div []
-        [ h1 [] [ text "Khmer Unicode Enhance" ]
+    div [ class "container" ]
+        [ h2 [] [ text "Khmer Unicode Enhance" ]
           -- , input [ placeholder "Write here", value model.input, onInput UserInput ] []
           -- , p [] [ text (toString model.listTest) ]
-        , hr [] []
-        , h2 [] [ text "Tutorial" ]
-        , div []
-            [ h4 [] [ text "No Shift use double letter" ]
-            , p [] [ text "គេ   = [k + k] + e" ]
-            , p [] [ text "ល្បែង = l + j + b + [e + e] + g" ]
-            , h4 [] [ text "to Separate use space" ]
-            , p [] [ text "កករ = k + space + k + r" ]
-            , h4 [] [ text "to make actual space , type space 2 times" ]
-            , p [] [ text "space  = space + space" ]
-            , h4 [] [ text "complex example" ]
-            , p [] [ text "ខ្ញុំ  = x + j + space + [j + j] + u + [m + m]" ]
-            , h4 [] [ text "Change to khmer unicode before typing" ]
+          -- , hr [] []
+        , button [ class "btn btn-primary my-btn", onClick ToggleTutorial ]
+            [ text "បង្ហាញរបៀបប្រើប្រាស់" ]
+        , div
+            [ class
+                ("well"
+                    ++ (if model.tutorial then
+                            ""
+                        else
+                            " hidden"
+                       )
+                )
             ]
-        , hr [] []
-        , h4 [] [ text "Look here" ]
-        , p [ class "output" ] [ text model.translate ]
-        , hr [] []
-        , h4 [] [ text "Type Here" ]
-        , textarea
-            [ value model.input
-            , onInput UserInput
-            , placeholder "Type Khmer Word here"
-            , Html.Attributes.style
-                [ ( "height", "90px" )
-                , ( "width", "100%" )
+            [ h3 [] [ text "របៀបប្រើប្រាស់" ]
+            , div []
+                [ h4 [] [ text "No Shift use double letter" ]
+                , p [] [ text "គេ   = [k + k] + e" ]
+                , p [] [ text "ល្បែង = l + j + b + [e + e] + g" ]
+                , h4 [] [ text "to Separate use space" ]
+                , p [] [ text "កករ = k + space + k + r" ]
+                , h4 [] [ text "to make actual space , type space 2 times" ]
+                , p [] [ text "space  = space + space" ]
+                , h4 [] [ text "complex example" ]
+                , p [] [ text "ខ្ញុំ  = x + j + space + [j + j] + u + [m + m]" ]
+                , h4 [] [ text "Change to khmer unicode before typing" ]
                 ]
             ]
-            []
+        , div [ class "panel panel-primary" ]
+            [ div [ class "panel-heading" ]
+                [ h3 [ class "panel-title" ] [ text "លទ្ធិផល" ]
+                ]
+            , div [ class "panel-body output ", id "copy-me" ]
+                [ text model.translate
+                ]
+              -- h4 [] [ text "Look here" ]
+              -- , button [ class "btn btn-success copy-button", attribute "data-clipboard-target" "#copy-me" ] [ text "Copy" ]
+              -- , p [ class "output", id "copy-me" ] [ text model.translate ]
+            ]
+        , button [ class "btn btn-primary my-btn copy-button", attribute "data-clipboard-target" "#copy-me" ] [ text "Copy" ]
+          -- , hr [] []
+          -- , h4 [] [ text "Type Here" ]
+        , div [ class "well" ]
+            [ textarea
+                [ value model.input
+                , onInput UserInput
+                , placeholder "សរសារនៅទីនេះ"
+                , class "form-control"
+                , rows 5
+                  -- , Html.Attributes.style
+                  --     [ ( "height", "90px" )
+                  --     , ( "width", "100%" )
+                  --     ]
+                ]
+                []
+            ]
+        , hr [] []
         ]
