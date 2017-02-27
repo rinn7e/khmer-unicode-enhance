@@ -29,8 +29,8 @@ type alias Model =
 model : Model
 model =
     { input = ""
-    , translate = "អ្វីដែលសរសារនឹងចេញនៅទីនេះ"
-    , tutorial = True
+    , translate = "អ្វីដែលសរសេរនឹងចេញនៅទីនេះ"
+    , tutorial = False
     , listTest = [ [] ]
     , akharakrom =
         Dict.fromList
@@ -208,7 +208,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div [ class "container" ]
-        [ h2 [] [ text "Khmer Unicode Enhance" ]
+        [ h3 [] [ text "Khmer Unicode Enhance" ]
           -- , input [ placeholder "Write here", value model.input, onInput UserInput ] []
           -- , p [] [ text (toString model.listTest) ]
           -- , hr [] []
@@ -256,7 +256,7 @@ view model =
             [ textarea
                 [ value model.input
                 , onInput UserInput
-                , placeholder "សរសារនៅទីនេះ"
+                , placeholder "សរសេរនៅទីនេះ"
                 , class "form-control"
                 , rows 5
                   -- , Html.Attributes.style

@@ -9690,8 +9690,8 @@ var _user$project$Main$update = F2(
 	});
 var _user$project$Main$model = {
 	input: '',
-	translate: 'អ្វីដែលសរសារនឹងចេញនៅទីនេះ',
-	tutorial: true,
+	translate: 'អ្វីដែលសរសេរនឹងចេញនៅទីនេះ',
+	tutorial: false,
 	listTest: {
 		ctor: '::',
 		_0: {ctor: '[]'},
@@ -10005,7 +10005,7 @@ var _user$project$Main$view = function (model) {
 		{
 			ctor: '::',
 			_0: A2(
-				_elm_lang$html$Html$h2,
+				_elm_lang$html$Html$h3,
 				{ctor: '[]'},
 				{
 					ctor: '::',
@@ -10266,7 +10266,7 @@ var _user$project$Main$view = function (model) {
 													_0: _elm_lang$html$Html_Events$onInput(_user$project$Main$UserInput),
 													_1: {
 														ctor: '::',
-														_0: _elm_lang$html$Html_Attributes$placeholder('សរសារនៅទីនេះ'),
+														_0: _elm_lang$html$Html_Attributes$placeholder('សរសេរនៅទីនេះ'),
 														_1: {
 															ctor: '::',
 															_0: _elm_lang$html$Html_Attributes$class('form-control'),
