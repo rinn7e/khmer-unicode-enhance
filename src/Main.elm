@@ -142,8 +142,9 @@ update msg model =
                     listText =
                         text
                             |> String.split ""
-                            |> List.Extra.groupWhile (\x y -> x == y)
+                            |> List.Extra.group
 
+                    -- |> List.Extra.groupWhile (\x y -> x == y)
                     -------------------------------------------------------------------
                     -- BELOW ARE COMPOSITE AND APPLICATION FUNCTION THE SAME THING
                     -----------------------------------------------------------
@@ -267,4 +268,8 @@ view model =
                 []
             ]
         , hr [] []
+        , Html.span []
+            [ text "create by "
+            , a [ target "_blank", href "https://github.com/chmar77/khmer-unicode-enhance" ] [ text "chmar77" ]
+            ]
         ]

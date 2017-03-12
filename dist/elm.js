@@ -9611,12 +9611,7 @@ var _user$project$Main$update = F2(
 				{tutorial: true});
 		} else {
 			var _p1 = _p0._0;
-			var listText = A2(
-				_elm_community$list_extra$List_Extra$groupWhile,
-				F2(
-					function (x, y) {
-						return _elm_lang$core$Native_Utils.eq(x, y);
-					}),
+			var listText = _elm_community$list_extra$List_Extra$group(
 				A2(_elm_lang$core$String$split, '', _p1));
 			var translateText = A2(
 				_elm_lang$core$String$join,
@@ -10288,7 +10283,37 @@ var _user$project$Main$view = function (model) {
 										_elm_lang$html$Html$hr,
 										{ctor: '[]'},
 										{ctor: '[]'}),
-									_1: {ctor: '[]'}
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$span,
+											{ctor: '[]'},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text('create by '),
+												_1: {
+													ctor: '::',
+													_0: A2(
+														_elm_lang$html$Html$a,
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html_Attributes$target('_blank'),
+															_1: {
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$href('https://github.com/chmar77/khmer-unicode-enhance'),
+																_1: {ctor: '[]'}
+															}
+														},
+														{
+															ctor: '::',
+															_0: _elm_lang$html$Html$text('chmar77'),
+															_1: {ctor: '[]'}
+														}),
+													_1: {ctor: '[]'}
+												}
+											}),
+										_1: {ctor: '[]'}
+									}
 								}
 							}
 						}
