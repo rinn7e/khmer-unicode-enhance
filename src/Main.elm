@@ -269,7 +269,7 @@ view model =
             ]
         , hr [] []
         , Html.span []
-            [ text "create by "
+            [ text "created by "
             , a [ target "_blank", href "https://github.com/chmar77/khmer-unicode-enhance" ] [ text "chmar77" ]
             ]
         ]
