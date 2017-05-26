@@ -9590,6 +9590,295 @@ var _elm_lang$html$Html_Events$Options = F2(
 		return {stopPropagation: a, preventDefault: b};
 	});
 
+var _user$project$Data$dataTriple = _elm_lang$core$Dict$fromList(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: '២', _1: '@'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: '៣', _1: '៑'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: '៤', _1: '$'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: '៥', _1: '€'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: '៦', _1: '៙'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: '៧', _1: '៚'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: '៨', _1: '*'},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: '៩', _1: '{'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: '០', _1: '}'},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: 'ឥ', _1: 'x'},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: 'ឲ', _1: '៎'},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'ឮ', _1: '\\'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'េ', _1: 'ឯ'},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'រ', _1: 'ឫ'},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'ិ', _1: 'ឦ'},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'ោ', _1: 'ឱ'},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'ផ', _1: 'ឰ'},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'ៀ', _1: 'ឩ'},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'ឪ', _1: 'ឳ'},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'ើ', _1: '៖'},
+																					_1: {
+																						ctor: '::',
+																						_0: {ctor: '_Tuple2', _0: '់', _1: 'ៈ'},
+																						_1: {
+																							ctor: '::',
+																							_0: {ctor: '_Tuple2', _0: '។', _1: '.'},
+																							_1: {
+																								ctor: '::',
+																								_0: {ctor: '_Tuple2', _0: '៊', _1: '/'},
+																								_1: {ctor: '[]'}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
+var _user$project$Data$dataDouble = _elm_lang$core$Dict$fromList(
+	{
+		ctor: '::',
+		_0: {ctor: '_Tuple2', _0: '«', _1: '»'},
+		_1: {
+			ctor: '::',
+			_0: {ctor: '_Tuple2', _0: '១', _1: '!'},
+			_1: {
+				ctor: '::',
+				_0: {ctor: '_Tuple2', _0: '២', _1: 'ៗ'},
+				_1: {
+					ctor: '::',
+					_0: {ctor: '_Tuple2', _0: '៣', _1: 'ឈ'},
+					_1: {
+						ctor: '::',
+						_0: {ctor: '_Tuple2', _0: '៤', _1: '\"'},
+						_1: {
+							ctor: '::',
+							_0: {ctor: '_Tuple2', _0: '៥', _1: '%'},
+							_1: {
+								ctor: '::',
+								_0: {ctor: '_Tuple2', _0: '៦', _1: '៍'},
+								_1: {
+									ctor: '::',
+									_0: {ctor: '_Tuple2', _0: '៧', _1: '័'},
+									_1: {
+										ctor: '::',
+										_0: {ctor: '_Tuple2', _0: '៨', _1: '៏'},
+										_1: {
+											ctor: '::',
+											_0: {ctor: '_Tuple2', _0: '៩', _1: '('},
+											_1: {
+												ctor: '::',
+												_0: {ctor: '_Tuple2', _0: '០', _1: ')'},
+												_1: {
+													ctor: '::',
+													_0: {ctor: '_Tuple2', _0: 'ឥ', _1: '៌'},
+													_1: {
+														ctor: '::',
+														_0: {ctor: '_Tuple2', _0: 'ឲ', _1: '='},
+														_1: {
+															ctor: '::',
+															_0: {ctor: '_Tuple2', _0: 'ឮ', _1: 'ឭ'},
+															_1: {
+																ctor: '::',
+																_0: {ctor: '_Tuple2', _0: 'ឆ', _1: 'ឈ'},
+																_1: {
+																	ctor: '::',
+																	_0: {ctor: '_Tuple2', _0: 'ឹ', _1: 'ឺ'},
+																	_1: {
+																		ctor: '::',
+																		_0: {ctor: '_Tuple2', _0: 'េ', _1: 'ែ'},
+																		_1: {
+																			ctor: '::',
+																			_0: {ctor: '_Tuple2', _0: 'រ', _1: 'ឬ'},
+																			_1: {
+																				ctor: '::',
+																				_0: {ctor: '_Tuple2', _0: 'ត', _1: 'ទ'},
+																				_1: {
+																					ctor: '::',
+																					_0: {ctor: '_Tuple2', _0: 'យ', _1: 'ួ'},
+																					_1: {
+																						ctor: '::',
+																						_0: {ctor: '_Tuple2', _0: 'ុ', _1: 'ូ'},
+																						_1: {
+																							ctor: '::',
+																							_0: {ctor: '_Tuple2', _0: 'ិ', _1: 'ី'},
+																							_1: {
+																								ctor: '::',
+																								_0: {ctor: '_Tuple2', _0: 'ោ', _1: 'ៅ'},
+																								_1: {
+																									ctor: '::',
+																									_0: {ctor: '_Tuple2', _0: 'ផ', _1: 'ភ'},
+																									_1: {
+																										ctor: '::',
+																										_0: {ctor: '_Tuple2', _0: 'ៀ', _1: 'ឿ'},
+																										_1: {
+																											ctor: '::',
+																											_0: {ctor: '_Tuple2', _0: 'ឪ', _1: 'ឧ'},
+																											_1: {
+																												ctor: '::',
+																												_0: {ctor: '_Tuple2', _0: 'ា', _1: 'ា'},
+																												_1: {
+																													ctor: '::',
+																													_0: {ctor: '_Tuple2', _0: 'ស', _1: 'ៃ'},
+																													_1: {
+																														ctor: '::',
+																														_0: {ctor: '_Tuple2', _0: 'ដ', _1: 'ឌ'},
+																														_1: {
+																															ctor: '::',
+																															_0: {ctor: '_Tuple2', _0: 'ថ', _1: 'ធ'},
+																															_1: {
+																																ctor: '::',
+																																_0: {ctor: '_Tuple2', _0: 'ង', _1: 'អ'},
+																																_1: {
+																																	ctor: '::',
+																																	_0: {ctor: '_Tuple2', _0: 'ហ', _1: 'ះ'},
+																																	_1: {
+																																		ctor: '::',
+																																		_0: {ctor: '_Tuple2', _0: '្', _1: 'ញ'},
+																																		_1: {
+																																			ctor: '::',
+																																			_0: {ctor: '_Tuple2', _0: 'ក', _1: 'គ'},
+																																			_1: {
+																																				ctor: '::',
+																																				_0: {ctor: '_Tuple2', _0: 'ល', _1: 'ឡ'},
+																																				_1: {
+																																					ctor: '::',
+																																					_0: {ctor: '_Tuple2', _0: 'ើ', _1: 'ើ'},
+																																					_1: {
+																																						ctor: '::',
+																																						_0: {ctor: '_Tuple2', _0: '់', _1: '៉'},
+																																						_1: {
+																																							ctor: '::',
+																																							_0: {ctor: '_Tuple2', _0: 'ឋ', _1: 'ឍ'},
+																																							_1: {
+																																								ctor: '::',
+																																								_0: {ctor: '_Tuple2', _0: 'ខ', _1: 'ឃ'},
+																																								_1: {
+																																									ctor: '::',
+																																									_0: {ctor: '_Tuple2', _0: 'ច', _1: 'ជ'},
+																																									_1: {
+																																										ctor: '::',
+																																										_0: {ctor: '_Tuple2', _0: 'វ', _1: 'វ'},
+																																										_1: {
+																																											ctor: '::',
+																																											_0: {ctor: '_Tuple2', _0: 'ប', _1: 'ព'},
+																																											_1: {
+																																												ctor: '::',
+																																												_0: {ctor: '_Tuple2', _0: 'ន', _1: 'ណ'},
+																																												_1: {
+																																													ctor: '::',
+																																													_0: {ctor: '_Tuple2', _0: 'ម', _1: 'ំ'},
+																																													_1: {
+																																														ctor: '::',
+																																														_0: {ctor: '_Tuple2', _0: '។', _1: '៕'},
+																																														_1: {
+																																															ctor: '::',
+																																															_0: {ctor: '_Tuple2', _0: '៊', _1: '?'},
+																																															_1: {
+																																																ctor: '::',
+																																																_0: {ctor: '_Tuple2', _0: '​', _1: ' '},
+																																																_1: {
+																																																	ctor: '::',
+																																																	_0: {ctor: '_Tuple2', _0: 'error', _1: 'Mouse'},
+																																																	_1: {ctor: '[]'}
+																																																}
+																																															}
+																																														}
+																																													}
+																																												}
+																																											}
+																																										}
+																																									}
+																																								}
+																																							}
+																																						}
+																																					}
+																																				}
+																																			}
+																																		}
+																																	}
+																																}
+																															}
+																														}
+																													}
+																												}
+																											}
+																										}
+																									}
+																								}
+																							}
+																						}
+																					}
+																				}
+																			}
+																		}
+																	}
+																}
+															}
+														}
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	});
+
 var _user$project$Main$update = F2(
 	function (msg, model) {
 		var akharakroms = _elm_lang$core$Dict$fromList(
@@ -9604,11 +9893,19 @@ var _user$project$Main$update = F2(
 			});
 		var _p0 = msg;
 		if (_p0.ctor === 'ToggleTutorial') {
-			return model.tutorial ? _elm_lang$core$Native_Utils.update(
-				model,
-				{tutorial: false}) : _elm_lang$core$Native_Utils.update(
-				model,
-				{tutorial: true});
+			return model.tutorial ? {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_Utils.update(
+					model,
+					{tutorial: false}),
+				_1: _elm_lang$core$Platform_Cmd$none
+			} : {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_Utils.update(
+					model,
+					{tutorial: true}),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
 		} else {
 			var _p1 = _p0._0;
 			var listText = _elm_community$list_extra$List_Extra$group(
@@ -9678,9 +9975,13 @@ var _user$project$Main$update = F2(
 									}
 								},
 								listText)))));
-			return _elm_lang$core$Native_Utils.update(
-				model,
-				{input: _p1, listTest: listText, translate: translateText});
+			return {
+				ctor: '_Tuple2',
+				_0: _elm_lang$core$Native_Utils.update(
+					model,
+					{input: _p1, listTest: listText, translate: translateText}),
+				_1: _elm_lang$core$Platform_Cmd$none
+			};
 		}
 	});
 var _user$project$Main$model = {
@@ -9692,294 +9993,8 @@ var _user$project$Main$model = {
 		_0: {ctor: '[]'},
 		_1: {ctor: '[]'}
 	},
-	akharakrom: _elm_lang$core$Dict$fromList(
-		{
-			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: '«', _1: '»'},
-			_1: {
-				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: '១', _1: '!'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: '២', _1: 'ៗ'},
-					_1: {
-						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: '៣', _1: 'ឈ'},
-						_1: {
-							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: '៤', _1: '\"'},
-							_1: {
-								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: '៥', _1: '%'},
-								_1: {
-									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: '៦', _1: '៍'},
-									_1: {
-										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: '៧', _1: '័'},
-										_1: {
-											ctor: '::',
-											_0: {ctor: '_Tuple2', _0: '៨', _1: '៏'},
-											_1: {
-												ctor: '::',
-												_0: {ctor: '_Tuple2', _0: '៩', _1: '('},
-												_1: {
-													ctor: '::',
-													_0: {ctor: '_Tuple2', _0: '០', _1: ')'},
-													_1: {
-														ctor: '::',
-														_0: {ctor: '_Tuple2', _0: 'ឥ', _1: '៌'},
-														_1: {
-															ctor: '::',
-															_0: {ctor: '_Tuple2', _0: 'ឲ', _1: '='},
-															_1: {
-																ctor: '::',
-																_0: {ctor: '_Tuple2', _0: 'ឮ', _1: 'ឭ'},
-																_1: {
-																	ctor: '::',
-																	_0: {ctor: '_Tuple2', _0: 'ឆ', _1: 'ឈ'},
-																	_1: {
-																		ctor: '::',
-																		_0: {ctor: '_Tuple2', _0: 'ឹ', _1: 'ឺ'},
-																		_1: {
-																			ctor: '::',
-																			_0: {ctor: '_Tuple2', _0: 'េ', _1: 'ែ'},
-																			_1: {
-																				ctor: '::',
-																				_0: {ctor: '_Tuple2', _0: 'រ', _1: 'ឬ'},
-																				_1: {
-																					ctor: '::',
-																					_0: {ctor: '_Tuple2', _0: 'ត', _1: 'ទ'},
-																					_1: {
-																						ctor: '::',
-																						_0: {ctor: '_Tuple2', _0: 'យ', _1: 'ួ'},
-																						_1: {
-																							ctor: '::',
-																							_0: {ctor: '_Tuple2', _0: 'ុ', _1: 'ូ'},
-																							_1: {
-																								ctor: '::',
-																								_0: {ctor: '_Tuple2', _0: 'ិ', _1: 'ី'},
-																								_1: {
-																									ctor: '::',
-																									_0: {ctor: '_Tuple2', _0: 'ោ', _1: 'ៅ'},
-																									_1: {
-																										ctor: '::',
-																										_0: {ctor: '_Tuple2', _0: 'ផ', _1: 'ភ'},
-																										_1: {
-																											ctor: '::',
-																											_0: {ctor: '_Tuple2', _0: 'ៀ', _1: 'ឿ'},
-																											_1: {
-																												ctor: '::',
-																												_0: {ctor: '_Tuple2', _0: 'ឪ', _1: 'ឧ'},
-																												_1: {
-																													ctor: '::',
-																													_0: {ctor: '_Tuple2', _0: 'ា', _1: 'ា'},
-																													_1: {
-																														ctor: '::',
-																														_0: {ctor: '_Tuple2', _0: 'ស', _1: 'ៃ'},
-																														_1: {
-																															ctor: '::',
-																															_0: {ctor: '_Tuple2', _0: 'ដ', _1: 'ឌ'},
-																															_1: {
-																																ctor: '::',
-																																_0: {ctor: '_Tuple2', _0: 'ថ', _1: 'ធ'},
-																																_1: {
-																																	ctor: '::',
-																																	_0: {ctor: '_Tuple2', _0: 'ង', _1: 'អ'},
-																																	_1: {
-																																		ctor: '::',
-																																		_0: {ctor: '_Tuple2', _0: 'ហ', _1: 'ះ'},
-																																		_1: {
-																																			ctor: '::',
-																																			_0: {ctor: '_Tuple2', _0: '្', _1: 'ញ'},
-																																			_1: {
-																																				ctor: '::',
-																																				_0: {ctor: '_Tuple2', _0: 'ក', _1: 'គ'},
-																																				_1: {
-																																					ctor: '::',
-																																					_0: {ctor: '_Tuple2', _0: 'ល', _1: 'ឡ'},
-																																					_1: {
-																																						ctor: '::',
-																																						_0: {ctor: '_Tuple2', _0: 'ើ', _1: 'ើ'},
-																																						_1: {
-																																							ctor: '::',
-																																							_0: {ctor: '_Tuple2', _0: '់', _1: '៉'},
-																																							_1: {
-																																								ctor: '::',
-																																								_0: {ctor: '_Tuple2', _0: 'ឋ', _1: 'ឍ'},
-																																								_1: {
-																																									ctor: '::',
-																																									_0: {ctor: '_Tuple2', _0: 'ខ', _1: 'ឃ'},
-																																									_1: {
-																																										ctor: '::',
-																																										_0: {ctor: '_Tuple2', _0: 'ច', _1: 'ជ'},
-																																										_1: {
-																																											ctor: '::',
-																																											_0: {ctor: '_Tuple2', _0: 'វ', _1: 'វ'},
-																																											_1: {
-																																												ctor: '::',
-																																												_0: {ctor: '_Tuple2', _0: 'ប', _1: 'ព'},
-																																												_1: {
-																																													ctor: '::',
-																																													_0: {ctor: '_Tuple2', _0: 'ន', _1: 'ណ'},
-																																													_1: {
-																																														ctor: '::',
-																																														_0: {ctor: '_Tuple2', _0: 'ម', _1: 'ំ'},
-																																														_1: {
-																																															ctor: '::',
-																																															_0: {ctor: '_Tuple2', _0: '។', _1: '៕'},
-																																															_1: {
-																																																ctor: '::',
-																																																_0: {ctor: '_Tuple2', _0: '៊', _1: '?'},
-																																																_1: {
-																																																	ctor: '::',
-																																																	_0: {ctor: '_Tuple2', _0: '​', _1: ' '},
-																																																	_1: {
-																																																		ctor: '::',
-																																																		_0: {ctor: '_Tuple2', _0: 'error', _1: 'Mouse'},
-																																																		_1: {ctor: '[]'}
-																																																	}
-																																																}
-																																															}
-																																														}
-																																													}
-																																												}
-																																											}
-																																										}
-																																									}
-																																								}
-																																							}
-																																						}
-																																					}
-																																				}
-																																			}
-																																		}
-																																	}
-																																}
-																															}
-																														}
-																													}
-																												}
-																											}
-																										}
-																									}
-																								}
-																							}
-																						}
-																					}
-																				}
-																			}
-																		}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		}),
-	akharakrom2: _elm_lang$core$Dict$fromList(
-		{
-			ctor: '::',
-			_0: {ctor: '_Tuple2', _0: '២', _1: '@'},
-			_1: {
-				ctor: '::',
-				_0: {ctor: '_Tuple2', _0: '៣', _1: '៑'},
-				_1: {
-					ctor: '::',
-					_0: {ctor: '_Tuple2', _0: '៤', _1: '$'},
-					_1: {
-						ctor: '::',
-						_0: {ctor: '_Tuple2', _0: '៥', _1: '€'},
-						_1: {
-							ctor: '::',
-							_0: {ctor: '_Tuple2', _0: '៦', _1: '៙'},
-							_1: {
-								ctor: '::',
-								_0: {ctor: '_Tuple2', _0: '៧', _1: '៚'},
-								_1: {
-									ctor: '::',
-									_0: {ctor: '_Tuple2', _0: '៨', _1: '*'},
-									_1: {
-										ctor: '::',
-										_0: {ctor: '_Tuple2', _0: '៩', _1: '{'},
-										_1: {
-											ctor: '::',
-											_0: {ctor: '_Tuple2', _0: '០', _1: '}'},
-											_1: {
-												ctor: '::',
-												_0: {ctor: '_Tuple2', _0: 'ឥ', _1: 'x'},
-												_1: {
-													ctor: '::',
-													_0: {ctor: '_Tuple2', _0: 'ឲ', _1: '៎'},
-													_1: {
-														ctor: '::',
-														_0: {ctor: '_Tuple2', _0: 'ឮ', _1: '\\'},
-														_1: {
-															ctor: '::',
-															_0: {ctor: '_Tuple2', _0: 'េ', _1: 'ឯ'},
-															_1: {
-																ctor: '::',
-																_0: {ctor: '_Tuple2', _0: 'រ', _1: 'ឫ'},
-																_1: {
-																	ctor: '::',
-																	_0: {ctor: '_Tuple2', _0: 'ិ', _1: 'ឦ'},
-																	_1: {
-																		ctor: '::',
-																		_0: {ctor: '_Tuple2', _0: 'ោ', _1: 'ឱ'},
-																		_1: {
-																			ctor: '::',
-																			_0: {ctor: '_Tuple2', _0: 'ផ', _1: 'ឰ'},
-																			_1: {
-																				ctor: '::',
-																				_0: {ctor: '_Tuple2', _0: 'ៀ', _1: 'ឩ'},
-																				_1: {
-																					ctor: '::',
-																					_0: {ctor: '_Tuple2', _0: 'ឪ', _1: 'ឳ'},
-																					_1: {
-																						ctor: '::',
-																						_0: {ctor: '_Tuple2', _0: 'ើ', _1: '៖'},
-																						_1: {
-																							ctor: '::',
-																							_0: {ctor: '_Tuple2', _0: '់', _1: 'ៈ'},
-																							_1: {
-																								ctor: '::',
-																								_0: {ctor: '_Tuple2', _0: '។', _1: '.'},
-																								_1: {
-																									ctor: '::',
-																									_0: {ctor: '_Tuple2', _0: '៊', _1: '/'},
-																									_1: {ctor: '[]'}
-																								}
-																							}
-																						}
-																					}
-																				}
-																			}
-																		}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}
-								}
-							}
-						}
-					}
-				}
-			}
-		})
+	akharakrom: _user$project$Data$dataDouble,
+	akharakrom2: _user$project$Data$dataTriple
 };
 var _user$project$Main$Model = F6(
 	function (a, b, c, d, e, f) {
@@ -10286,11 +10301,11 @@ var _user$project$Main$view = function (model) {
 									_1: {
 										ctor: '::',
 										_0: A2(
-											_elm_lang$html$Html$span,
+											_elm_lang$html$Html$p,
 											{ctor: '[]'},
 											{
 												ctor: '::',
-												_0: _elm_lang$html$Html$text('created by '),
+												_0: _elm_lang$html$Html$text('មានយោបល់អ្វីអាចទំនាក់ទំនងបានតាម '),
 												_1: {
 													ctor: '::',
 													_0: A2(
@@ -10300,19 +10315,49 @@ var _user$project$Main$view = function (model) {
 															_0: _elm_lang$html$Html_Attributes$target('_blank'),
 															_1: {
 																ctor: '::',
-																_0: _elm_lang$html$Html_Attributes$href('https://github.com/chmar77/khmer-unicode-enhance'),
+																_0: _elm_lang$html$Html_Attributes$href('https://www.facebook.com/pg/Elm-Cambodia-1192992554180521/'),
 																_1: {ctor: '[]'}
 															}
 														},
 														{
 															ctor: '::',
-															_0: _elm_lang$html$Html$text('chmar77'),
+															_0: _elm_lang$html$Html$text('Elm Cambodia'),
 															_1: {ctor: '[]'}
 														}),
 													_1: {ctor: '[]'}
 												}
 											}),
-										_1: {ctor: '[]'}
+										_1: {
+											ctor: '::',
+											_0: A2(
+												_elm_lang$html$Html$p,
+												{ctor: '[]'},
+												{
+													ctor: '::',
+													_0: _elm_lang$html$Html$text('បង្កើតឡើងដោយ '),
+													_1: {
+														ctor: '::',
+														_0: A2(
+															_elm_lang$html$Html$a,
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html_Attributes$target('_blank'),
+																_1: {
+																	ctor: '::',
+																	_0: _elm_lang$html$Html_Attributes$href('https://github.com/chmar77/khmer-unicode-enhance'),
+																	_1: {ctor: '[]'}
+																}
+															},
+															{
+																ctor: '::',
+																_0: _elm_lang$html$Html$text('chmar77'),
+																_1: {ctor: '[]'}
+															}),
+														_1: {ctor: '[]'}
+													}
+												}),
+											_1: {ctor: '[]'}
+										}
 									}
 								}
 							}
@@ -10322,8 +10367,15 @@ var _user$project$Main$view = function (model) {
 			}
 		});
 };
-var _user$project$Main$main = _elm_lang$html$Html$beginnerProgram(
-	{model: _user$project$Main$model, update: _user$project$Main$update, view: _user$project$Main$view})();
+var _user$project$Main$main = _elm_lang$html$Html$program(
+	{
+		init: {ctor: '_Tuple2', _0: _user$project$Main$model, _1: _elm_lang$core$Platform_Cmd$none},
+		update: _user$project$Main$update,
+		view: _user$project$Main$view,
+		subscriptions: function (x) {
+			return _elm_lang$core$Platform_Sub$none;
+		}
+	})();
 
 var Elm = {};
 Elm['Main'] = Elm['Main'] || {};

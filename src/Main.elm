@@ -5,14 +5,16 @@ import Html.Events exposing (..)
 import Html.Attributes exposing (..)
 import List.Extra exposing (..)
 import Dict
+import Data
 
 
 main : Program Never Model Msg
 main =
-    Html.beginnerProgram
-        { model = model
+    Html.program
+        { init = ( model, Cmd.none )
         , update = update
         , view = view
+        , subscriptions = (\x -> Sub.none)
         }
 
 
@@ -32,83 +34,8 @@ model =
     , translate = "អ្វីដែលសរសេរនឹងចេញនៅទីនេះ"
     , tutorial = False
     , listTest = [ [] ]
-    , akharakrom =
-        Dict.fromList
-            [ ( "«", "»" )
-            , ( "១", "!" )
-            , ( "២", "ៗ" )
-            , ( "៣", "ឈ" )
-            , ( "៤", "\"" )
-            , ( "៥", "%" )
-            , ( "៦", "៍" )
-            , ( "៧", "័" )
-            , ( "៨", "៏" )
-            , ( "៩", "(" )
-            , ( "០", ")" )
-            , ( "ឥ", "៌" )
-            , ( "ឲ", "=" )
-            , ( "ឮ", "ឭ" )
-            , ( "ឆ", "ឈ" )
-            , ( "ឹ", "ឺ" )
-            , ( "េ", "ែ" )
-            , ( "រ", "ឬ" )
-            , ( "ត", "ទ" )
-            , ( "យ", "ួ" )
-            , ( "ុ", "ូ" )
-            , ( "ិ", "ី" )
-            , ( "ោ", "ៅ" )
-            , ( "ផ", "ភ" )
-            , ( "ៀ", "ឿ" )
-            , ( "ឪ", "ឧ" )
-            , ( "ា", "ា" )
-            , ( "ស", "ៃ" )
-            , ( "ដ", "ឌ" )
-            , ( "ថ", "ធ" )
-            , ( "ង", "អ" )
-            , ( "ហ", "ះ" )
-            , ( "្", "ញ" )
-            , ( "ក", "គ" )
-            , ( "ល", "ឡ" )
-            , ( "ើ", "ើ" )
-            , ( "់", "៉" )
-            , ( "ឋ", "ឍ" )
-            , ( "ខ", "ឃ" )
-            , ( "ច", "ជ" )
-            , ( "វ", "វ" )
-            , ( "ប", "ព" )
-            , ( "ន", "ណ" )
-            , ( "ម", "ំ" )
-            , ( "។", "៕" )
-            , ( "៊", "?" )
-            , ( "\x200B", " " )
-            , ( "error", "Mouse" )
-            ]
-    , akharakrom2 =
-        Dict.fromList
-            [ ( "២", "@" )
-            , ( "៣", "៑" )
-            , ( "៤", "$" )
-            , ( "៥", "€" )
-            , ( "៦", "៙" )
-            , ( "៧", "៚" )
-            , ( "៨", "*" )
-            , ( "៩", "{" )
-            , ( "០", "}" )
-            , ( "ឥ", "x" )
-            , ( "ឲ", "៎" )
-            , ( "ឮ", "\\" )
-            , ( "េ", "ឯ" )
-            , ( "រ", "ឫ" )
-            , ( "ិ", "ឦ" )
-            , ( "ោ", "ឱ" )
-            , ( "ផ", "ឰ" )
-            , ( "ៀ", "ឩ" )
-            , ( "ឪ", "ឳ" )
-            , ( "ើ", "៖" )
-            , ( "់", "ៈ" )
-            , ( "។", "." )
-            , ( "៊", "/" )
-            ]
+    , akharakrom = Data.dataDouble
+    , akharakrom2 = Data.dataTriple
     }
 
 
@@ -117,13 +44,7 @@ type Msg
     | ToggleTutorial
 
 
-
--- getCurrentIndex : Model -> Int
--- getCurrentIndex model =
---   { model | todo = { modelTodo | index } }
-
-
-update : Msg -> Model -> Model
+update : Msg -> Model -> ( Model, Cmd msg )
 update msg model =
     let
         akharakroms =
@@ -132,9 +53,9 @@ update msg model =
         case msg of
             ToggleTutorial ->
                 if model.tutorial then
-                    ({ model | tutorial = False })
+                    ( { model | tutorial = False }, Cmd.none )
                 else
-                    ({ model | tutorial = True })
+                    ( { model | tutorial = True }, Cmd.none )
 
             UserInput text ->
                 let
@@ -199,11 +120,13 @@ update msg model =
                             |> List.filter (\x -> x /= "\x200B")
                             |> String.join ""
                 in
-                    { model
+                    ( { model
                         | input = text
                         , listTest = listText
                         , translate = translateText
-                    }
+                      }
+                    , Cmd.none
+                    )
 
 
 view : Model -> Html Msg
@@ -268,8 +191,12 @@ view model =
                 []
             ]
         , hr [] []
-        , Html.span []
-            [ text "created by "
+        , Html.p []
+            [ text "មានយោបល់អ្វីអាចទំនាក់ទំនងបានតាម "
+            , a [ target "_blank", href "https://www.facebook.com/pg/Elm-Cambodia-1192992554180521/" ] [ text "Elm Cambodia" ]
+            ]
+        , Html.p []
+            [ text "បង្កើតឡើងដោយ "
             , a [ target "_blank", href "https://github.com/chmar77/khmer-unicode-enhance" ] [ text "chmar77" ]
             ]
         ]
