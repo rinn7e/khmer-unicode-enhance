@@ -1,7 +1,11 @@
 body {
   font-size: 16px;
+  font-family: 'Siemreap', cursive;
+  letter-spacing: 0px;
 }
-
+button{
+  letter-spacing:0px;
+}
   .output {
     font-size:22px;
     word-wrap:break-word;
@@ -15,4 +19,8 @@ body {
 
 .hidden{
   display:none
+}
+
+.en{
+  font-family: "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
 }

@@ -21,7 +21,7 @@ main =
 type alias Model =
     { input : String
     , translate : String
-    , tutorial : Bool
+    , tutorialStatus : Bool
     , listTest : List (List String)
     , akharakrom : Dict.Dict String String
     , akharakrom2 : Dict.Dict String String
@@ -32,7 +32,7 @@ model : Model
 model =
     { input = ""
     , translate = "អ្វីដែលសរសេរនឹងចេញនៅទីនេះ"
-    , tutorial = False
+    , tutorialStatus = True
     , listTest = [ [] ]
     , akharakrom = Data.dataDouble
     , akharakrom2 = Data.dataTriple
@@ -52,10 +52,10 @@ update msg model =
     in
         case msg of
             ToggleTutorial ->
-                if model.tutorial then
-                    ( { model | tutorial = False }, Cmd.none )
+                if model.tutorialStatus then
+                    ( { model | tutorialStatus = False }, Cmd.none )
                 else
-                    ( { model | tutorial = True }, Cmd.none )
+                    ( { model | tutorialStatus = True }, Cmd.none )
 
             UserInput text ->
                 let
@@ -132,36 +132,13 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div [ class "container" ]
-        [ h3 [] [ text "Khmer Unicode Enhance" ]
+        [ h3 [ class "en" ] [ text "Khmer Unicode Enhance" ]
           -- , input [ placeholder "Write here", value model.input, onInput UserInput ] []
           -- , p [] [ text (toString model.listTest) ]
           -- , hr [] []
         , button [ class "btn btn-primary my-btn", onClick ToggleTutorial ]
             [ text "បង្ហាញរបៀបប្រើប្រាស់" ]
-        , div
-            [ class
-                ("well"
-                    ++ (if model.tutorial then
-                            ""
-                        else
-                            " hidden"
-                       )
-                )
-            ]
-            [ h3 [] [ text "របៀបប្រើប្រាស់" ]
-            , div []
-                [ h4 [] [ text "No Shift use double letter" ]
-                , p [] [ text "គេ   = [k + k] + e" ]
-                , p [] [ text "ល្បែង = l + j + b + [e + e] + g" ]
-                , h4 [] [ text "to Separate use space" ]
-                , p [] [ text "កករ = k + space + k + r" ]
-                , h4 [] [ text "to make actual space , type space 2 times" ]
-                , p [] [ text "space  = space + space" ]
-                , h4 [] [ text "complex example" ]
-                , p [] [ text "ខ្ញុំ  = x + j + space + [j + j] + u + [m + m]" ]
-                , h4 [] [ text "Change to khmer unicode before typing" ]
-                ]
-            ]
+        , tutorialView model.tutorialStatus
         , div [ class "panel panel-primary" ]
             [ div [ class "panel-heading" ]
                 [ h3 [ class "panel-title" ] [ text "លទ្ធិផល" ]
@@ -173,7 +150,11 @@ view model =
               -- , button [ class "btn btn-success copy-button", attribute "data-clipboard-target" "#copy-me" ] [ text "Copy" ]
               -- , p [ class "output", id "copy-me" ] [ text model.translate ]
             ]
-        , button [ class "btn btn-primary my-btn copy-button", attribute "data-clipboard-target" "#copy-me" ] [ text "Copy" ]
+        , button
+            [ class "btn btn-primary my-btn copy-button en"
+            , attribute "data-clipboard-target" "#copy-me"
+            ]
+            [ text "Copy" ]
           -- , hr [] []
           -- , h4 [] [ text "Type Here" ]
         , div [ class "well" ]
@@ -199,4 +180,76 @@ view model =
             [ text "បង្កើតឡើងដោយ "
             , a [ target "_blank", href "https://github.com/chmar77/khmer-unicode-enhance" ] [ text "chmar77" ]
             ]
+        ]
+
+
+tutorialView status =
+    let
+        instructionList =
+            [ { label = "Type key two times instead of using Shift key"
+              , exampleList =
+                    [ { word = "គេ"
+                      , desc = "k + k + e"
+                      }
+                    , { word = "ល្បែង"
+                      , desc = "l + j + b + [e + e] + g"
+                      }
+                    ]
+              }
+            , { label = "To two type the same character twice, type Space in between"
+              , exampleList =
+                    [ { word = "កករ"
+                      , desc = "k + space + k + r"
+                      }
+                    ]
+              }
+            , { label = "To output Space, type Space 2 times"
+              , exampleList =
+                    [ { word = "ក ក"
+                      , desc = "k + [space + space] + k"
+                      }
+                    ]
+              }
+            , { label = "Complex Example"
+              , exampleList =
+                    [ { word = "ខ្ញុំ"
+                      , desc = "x + j + space + [j + j] + u + [m + m]"
+                      }
+                    ]
+              }
+            ]
+    in
+        div
+            [ class
+                ("well"
+                    ++ (if status then
+                            ""
+                        else
+                            " hidden"
+                       )
+                )
+            ]
+            [ h3 [] [ strong [] [ text "របៀបប្រើប្រាស់" ] ]
+            , p [ class "en" ] [ text "(Change to khmer unicode before typing)" ]
+            , hr [] []
+            , div [] <|
+                List.map
+                    (\instruction -> instructionView instruction)
+                    instructionList
+            ]
+
+
+instructionView instruction =
+    div []
+        [ h5 [ class "en" ]
+            [ text instruction.label ]
+        , div [] <|
+            List.map
+                (\example ->
+                    p []
+                        [ text ("- " ++ example.word)
+                        , Html.span [ class "en " ] [ text ("= " ++ example.desc) ]
+                        ]
+                )
+                instruction.exampleList
         ]

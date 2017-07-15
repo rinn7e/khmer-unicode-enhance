@@ -9879,6 +9879,178 @@ var _user$project$Data$dataDouble = _elm_lang$core$Dict$fromList(
 		}
 	});
 
+var _user$project$Main$instructionView = function (instruction) {
+	return A2(
+		_elm_lang$html$Html$div,
+		{ctor: '[]'},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h5,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('en'),
+					_1: {ctor: '[]'}
+				},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html$text(instruction.label),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$div,
+					{ctor: '[]'},
+					A2(
+						_elm_lang$core$List$map,
+						function (example) {
+							return A2(
+								_elm_lang$html$Html$p,
+								{ctor: '[]'},
+								{
+									ctor: '::',
+									_0: _elm_lang$html$Html$text(
+										A2(_elm_lang$core$Basics_ops['++'], '- ', example.word)),
+									_1: {
+										ctor: '::',
+										_0: A2(
+											_elm_lang$html$Html$span,
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$class('en '),
+												_1: {ctor: '[]'}
+											},
+											{
+												ctor: '::',
+												_0: _elm_lang$html$Html$text(
+													A2(_elm_lang$core$Basics_ops['++'], '= ', example.desc)),
+												_1: {ctor: '[]'}
+											}),
+										_1: {ctor: '[]'}
+									}
+								});
+						},
+						instruction.exampleList)),
+				_1: {ctor: '[]'}
+			}
+		});
+};
+var _user$project$Main$tutorialView = function (status) {
+	var instructionList = {
+		ctor: '::',
+		_0: {
+			label: 'Type key two times instead of using Shift key',
+			exampleList: {
+				ctor: '::',
+				_0: {word: 'គេ', desc: 'k + k + e'},
+				_1: {
+					ctor: '::',
+					_0: {word: 'ល្បែង', desc: 'l + j + b + [e + e] + g'},
+					_1: {ctor: '[]'}
+				}
+			}
+		},
+		_1: {
+			ctor: '::',
+			_0: {
+				label: 'To two type the same character twice, type Space in between',
+				exampleList: {
+					ctor: '::',
+					_0: {word: 'កករ', desc: 'k + space + k + r'},
+					_1: {ctor: '[]'}
+				}
+			},
+			_1: {
+				ctor: '::',
+				_0: {
+					label: 'To output Space, type Space 2 times',
+					exampleList: {
+						ctor: '::',
+						_0: {word: 'ក ក', desc: 'k + [space + space] + k'},
+						_1: {ctor: '[]'}
+					}
+				},
+				_1: {
+					ctor: '::',
+					_0: {
+						label: 'Complex Example',
+						exampleList: {
+							ctor: '::',
+							_0: {word: 'ខ្ញុំ', desc: 'x + j + space + [j + j] + u + [m + m]'},
+							_1: {ctor: '[]'}
+						}
+					},
+					_1: {ctor: '[]'}
+				}
+			}
+		}
+	};
+	return A2(
+		_elm_lang$html$Html$div,
+		{
+			ctor: '::',
+			_0: _elm_lang$html$Html_Attributes$class(
+				A2(
+					_elm_lang$core$Basics_ops['++'],
+					'well',
+					status ? '' : ' hidden')),
+			_1: {ctor: '[]'}
+		},
+		{
+			ctor: '::',
+			_0: A2(
+				_elm_lang$html$Html$h3,
+				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$strong,
+						{ctor: '[]'},
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html$text('របៀបប្រើប្រាស់'),
+							_1: {ctor: '[]'}
+						}),
+					_1: {ctor: '[]'}
+				}),
+			_1: {
+				ctor: '::',
+				_0: A2(
+					_elm_lang$html$Html$p,
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$class('en'),
+						_1: {ctor: '[]'}
+					},
+					{
+						ctor: '::',
+						_0: _elm_lang$html$Html$text('(Change to khmer unicode before typing)'),
+						_1: {ctor: '[]'}
+					}),
+				_1: {
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$hr,
+						{ctor: '[]'},
+						{ctor: '[]'}),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{ctor: '[]'},
+							A2(
+								_elm_lang$core$List$map,
+								function (instruction) {
+									return _user$project$Main$instructionView(instruction);
+								},
+								instructionList)),
+						_1: {ctor: '[]'}
+					}
+				}
+			}
+		});
+};
 var _user$project$Main$update = F2(
 	function (msg, model) {
 		var akharakroms = _elm_lang$core$Dict$fromList(
@@ -9893,17 +10065,17 @@ var _user$project$Main$update = F2(
 			});
 		var _p0 = msg;
 		if (_p0.ctor === 'ToggleTutorial') {
-			return model.tutorial ? {
+			return model.tutorialStatus ? {
 				ctor: '_Tuple2',
 				_0: _elm_lang$core$Native_Utils.update(
 					model,
-					{tutorial: false}),
+					{tutorialStatus: false}),
 				_1: _elm_lang$core$Platform_Cmd$none
 			} : {
 				ctor: '_Tuple2',
 				_0: _elm_lang$core$Native_Utils.update(
 					model,
-					{tutorial: true}),
+					{tutorialStatus: true}),
 				_1: _elm_lang$core$Platform_Cmd$none
 			};
 		} else {
@@ -9987,7 +10159,7 @@ var _user$project$Main$update = F2(
 var _user$project$Main$model = {
 	input: '',
 	translate: 'អ្វីដែលសរសេរនឹងចេញនៅទីនេះ',
-	tutorial: false,
+	tutorialStatus: true,
 	listTest: {
 		ctor: '::',
 		_0: {ctor: '[]'},
@@ -9998,7 +10170,7 @@ var _user$project$Main$model = {
 };
 var _user$project$Main$Model = F6(
 	function (a, b, c, d, e, f) {
-		return {input: a, translate: b, tutorial: c, listTest: d, akharakrom: e, akharakrom2: f};
+		return {input: a, translate: b, tutorialStatus: c, listTest: d, akharakrom: e, akharakrom2: f};
 	});
 var _user$project$Main$ToggleTutorial = {ctor: 'ToggleTutorial'};
 var _user$project$Main$UserInput = function (a) {
@@ -10016,7 +10188,11 @@ var _user$project$Main$view = function (model) {
 			ctor: '::',
 			_0: A2(
 				_elm_lang$html$Html$h3,
-				{ctor: '[]'},
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$class('en'),
+					_1: {ctor: '[]'}
+				},
 				{
 					ctor: '::',
 					_0: _elm_lang$html$Html$text('Khmer Unicode Enhance'),
@@ -10042,146 +10218,7 @@ var _user$project$Main$view = function (model) {
 					}),
 				_1: {
 					ctor: '::',
-					_0: A2(
-						_elm_lang$html$Html$div,
-						{
-							ctor: '::',
-							_0: _elm_lang$html$Html_Attributes$class(
-								A2(
-									_elm_lang$core$Basics_ops['++'],
-									'well',
-									model.tutorial ? '' : ' hidden')),
-							_1: {ctor: '[]'}
-						},
-						{
-							ctor: '::',
-							_0: A2(
-								_elm_lang$html$Html$h3,
-								{ctor: '[]'},
-								{
-									ctor: '::',
-									_0: _elm_lang$html$Html$text('របៀបប្រើប្រាស់'),
-									_1: {ctor: '[]'}
-								}),
-							_1: {
-								ctor: '::',
-								_0: A2(
-									_elm_lang$html$Html$div,
-									{ctor: '[]'},
-									{
-										ctor: '::',
-										_0: A2(
-											_elm_lang$html$Html$h4,
-											{ctor: '[]'},
-											{
-												ctor: '::',
-												_0: _elm_lang$html$Html$text('No Shift use double letter'),
-												_1: {ctor: '[]'}
-											}),
-										_1: {
-											ctor: '::',
-											_0: A2(
-												_elm_lang$html$Html$p,
-												{ctor: '[]'},
-												{
-													ctor: '::',
-													_0: _elm_lang$html$Html$text('គេ   = [k + k] + e'),
-													_1: {ctor: '[]'}
-												}),
-											_1: {
-												ctor: '::',
-												_0: A2(
-													_elm_lang$html$Html$p,
-													{ctor: '[]'},
-													{
-														ctor: '::',
-														_0: _elm_lang$html$Html$text('ល្បែង = l + j + b + [e + e] + g'),
-														_1: {ctor: '[]'}
-													}),
-												_1: {
-													ctor: '::',
-													_0: A2(
-														_elm_lang$html$Html$h4,
-														{ctor: '[]'},
-														{
-															ctor: '::',
-															_0: _elm_lang$html$Html$text('to Separate use space'),
-															_1: {ctor: '[]'}
-														}),
-													_1: {
-														ctor: '::',
-														_0: A2(
-															_elm_lang$html$Html$p,
-															{ctor: '[]'},
-															{
-																ctor: '::',
-																_0: _elm_lang$html$Html$text('កករ = k + space + k + r'),
-																_1: {ctor: '[]'}
-															}),
-														_1: {
-															ctor: '::',
-															_0: A2(
-																_elm_lang$html$Html$h4,
-																{ctor: '[]'},
-																{
-																	ctor: '::',
-																	_0: _elm_lang$html$Html$text('to make actual space , type space 2 times'),
-																	_1: {ctor: '[]'}
-																}),
-															_1: {
-																ctor: '::',
-																_0: A2(
-																	_elm_lang$html$Html$p,
-																	{ctor: '[]'},
-																	{
-																		ctor: '::',
-																		_0: _elm_lang$html$Html$text('space  = space + space'),
-																		_1: {ctor: '[]'}
-																	}),
-																_1: {
-																	ctor: '::',
-																	_0: A2(
-																		_elm_lang$html$Html$h4,
-																		{ctor: '[]'},
-																		{
-																			ctor: '::',
-																			_0: _elm_lang$html$Html$text('complex example'),
-																			_1: {ctor: '[]'}
-																		}),
-																	_1: {
-																		ctor: '::',
-																		_0: A2(
-																			_elm_lang$html$Html$p,
-																			{ctor: '[]'},
-																			{
-																				ctor: '::',
-																				_0: _elm_lang$html$Html$text('ខ្ញុំ  = x + j + space + [j + j] + u + [m + m]'),
-																				_1: {ctor: '[]'}
-																			}),
-																		_1: {
-																			ctor: '::',
-																			_0: A2(
-																				_elm_lang$html$Html$h4,
-																				{ctor: '[]'},
-																				{
-																					ctor: '::',
-																					_0: _elm_lang$html$Html$text('Change to khmer unicode before typing'),
-																					_1: {ctor: '[]'}
-																				}),
-																			_1: {ctor: '[]'}
-																		}
-																	}
-																}
-															}
-														}
-													}
-												}
-											}
-										}
-									}),
-								_1: {ctor: '[]'}
-							}
-						}),
+					_0: _user$project$Main$tutorialView(model.tutorialStatus),
 					_1: {
 						ctor: '::',
 						_0: A2(
@@ -10243,7 +10280,7 @@ var _user$project$Main$view = function (model) {
 								_elm_lang$html$Html$button,
 								{
 									ctor: '::',
-									_0: _elm_lang$html$Html_Attributes$class('btn btn-primary my-btn copy-button'),
+									_0: _elm_lang$html$Html_Attributes$class('btn btn-primary my-btn copy-button en'),
 									_1: {
 										ctor: '::',
 										_0: A2(_elm_lang$html$Html_Attributes$attribute, 'data-clipboard-target', '#copy-me'),
