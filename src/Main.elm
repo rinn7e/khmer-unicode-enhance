@@ -22,6 +22,7 @@ type alias Model =
     { input : String
     , translate : String
     , tutorialStatus : Bool
+    , updateStatus : Bool
     , listTest : List (List String)
     , akharakrom : Dict.Dict String String
     , akharakrom2 : Dict.Dict String String
@@ -32,7 +33,8 @@ model : Model
 model =
     { input = ""
     , translate = "អ្វីដែលសរសេរនឹងចេញនៅទីនេះ"
-    , tutorialStatus = True
+    , tutorialStatus = False
+    , updateStatus = False
     , listTest = [ [] ]
     , akharakrom = Data.dataDouble
     , akharakrom2 = Data.dataTriple
@@ -136,8 +138,12 @@ view model =
           -- , input [ placeholder "Write here", value model.input, onInput UserInput ] []
           -- , p [] [ text (toString model.listTest) ]
           -- , hr [] []
-        , button [ class "btn btn-primary my-btn", onClick ToggleTutorial ]
-            [ text "បង្ហាញរបៀបប្រើប្រាស់" ]
+        , div []
+            [ button [ class "btn btn-primary my-btn", onClick ToggleTutorial ]
+                [ text "បង្ហាញរបៀបប្រើប្រាស់" ]
+              -- , button [ class "btn btn-primary my-btn en", onClick ToggleTutorial ]
+              --     [ text "Update" ]
+            ]
         , tutorialView model.tutorialStatus
         , div [ class "panel panel-primary" ]
             [ div [ class "panel-heading" ]

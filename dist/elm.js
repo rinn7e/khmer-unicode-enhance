@@ -10159,7 +10159,8 @@ var _user$project$Main$update = F2(
 var _user$project$Main$model = {
 	input: '',
 	translate: 'អ្វីដែលសរសេរនឹងចេញនៅទីនេះ',
-	tutorialStatus: true,
+	tutorialStatus: false,
+	updateStatus: false,
 	listTest: {
 		ctor: '::',
 		_0: {ctor: '[]'},
@@ -10168,9 +10169,9 @@ var _user$project$Main$model = {
 	akharakrom: _user$project$Data$dataDouble,
 	akharakrom2: _user$project$Data$dataTriple
 };
-var _user$project$Main$Model = F6(
-	function (a, b, c, d, e, f) {
-		return {input: a, translate: b, tutorialStatus: c, listTest: d, akharakrom: e, akharakrom2: f};
+var _user$project$Main$Model = F7(
+	function (a, b, c, d, e, f, g) {
+		return {input: a, translate: b, tutorialStatus: c, updateStatus: d, listTest: e, akharakrom: f, akharakrom2: g};
 	});
 var _user$project$Main$ToggleTutorial = {ctor: 'ToggleTutorial'};
 var _user$project$Main$UserInput = function (a) {
@@ -10201,19 +10202,26 @@ var _user$project$Main$view = function (model) {
 			_1: {
 				ctor: '::',
 				_0: A2(
-					_elm_lang$html$Html$button,
+					_elm_lang$html$Html$div,
+					{ctor: '[]'},
 					{
 						ctor: '::',
-						_0: _elm_lang$html$Html_Attributes$class('btn btn-primary my-btn'),
-						_1: {
-							ctor: '::',
-							_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$ToggleTutorial),
-							_1: {ctor: '[]'}
-						}
-					},
-					{
-						ctor: '::',
-						_0: _elm_lang$html$Html$text('បង្ហាញរបៀបប្រើប្រាស់'),
+						_0: A2(
+							_elm_lang$html$Html$button,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('btn btn-primary my-btn'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Events$onClick(_user$project$Main$ToggleTutorial),
+									_1: {ctor: '[]'}
+								}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('បង្ហាញរបៀបប្រើប្រាស់'),
+								_1: {ctor: '[]'}
+							}),
 						_1: {ctor: '[]'}
 					}),
 				_1: {
