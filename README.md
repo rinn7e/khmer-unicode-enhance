@@ -3,4 +3,4 @@
 ពាក្យដែលប្រើ shift ចុច key ដដែលពីរដងវិញ
 
 ចូលតាមនេះ 
-https://chmar77.github.io/khmer-unicode-enhance/
+https://rinn7e.github.io/khmer-unicode-enhance/
